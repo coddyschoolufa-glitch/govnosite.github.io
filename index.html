@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>МаркетГовна</title>
+    <script src="https://telegram.org/js/telegram-web-app.js?62"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<button id="cart_btn" onclick="openOrHide()">Корзина🛒Дебила</button>
+<div id="cart">
+    <p>Твоя корзина Дебил:</p>
+    <ul id="cart_list"></ul>
+    <button onclick="Igor_clearCart()">Удалить всё Дебил</button>
+    <button>Оформить Заказ</button>
+</div>
+<p style="color: #212901;">_____</p>
+<p style="color: #212901;">_____</p>
+
+<p style="color: white;text-align: center;">Дебил привет,</p>
+    <p style="color: white;text-align: center;">Это я ботОлег и это мой МаркетГовна, </p>
+        <p style="color: white;text-align: center;">Покупай какашки дебил</p>
+
+<div class="products">
+    <div class="card" data-name="Шашлык домашний" data-price = "1000">
+        <img src="https://i.pinimg.com/736x/d1/d4/97/d1d497971961cdd32d3fc300d1c38321.jpg">
+        <p>Шашлык домашний</p>
+        <p>1000 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+    <div class="card" data-name="Горячая собака" data-price = "1">
+        <img src="https://i.pinimg.com/736x/16/78/ec/1678eca958cd7a3d069dbe196fe7761b.jpg">
+        <p>Горячая собака</p>
+        <p>1 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+         </div>
+    <div class="card" data-name="Мама мия спагетти от Марио" data-price = "12042026">
+        <img src="https://i.pinimg.com/1200x/b4/da/b2/b4dab24bde68b7eb050c4b91e16cfbbf.jpg">
+        <p>Мама мия спагетти от марио</p>
+        <p>12042026 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+    <div class="card" data-name="Дитя" data-price = "0">
+        <img src="https://i.pinimg.com/736x/7c/fd/42/7cfd423dce551e549641dc5fde1bad90.jpg">
+        <p>Дитя</p>
+        <p>0 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+    <div class="card" data-name="Вэри хот потайто" data-price = "1000">
+        <img src="https://i.pinimg.com/736x/2b/8f/c5/2b8fc582d2fc9744ebada56120eafc61.jpg">
+        <p>Вэри хот потайто</p>
+        <p>1000 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+    <div class="card" data-name="Челавик-Павук" data-price = "67">
+        <img src="https://i.pinimg.com/736x/72/de/f2/72def2c80fc62c5589626146905f1e1b.jpg">
+        <p>Челавик-Павук</p>
+        <p>67 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+    <div class="card" data-name="Супчик" data-price = "6756">
+        <img src="https://i.pinimg.com/736x/b3/d2/45/b3d2459257d773afe6a4a679866e457c.jpg">
+        <p>Супчик</p>
+        <p>6756 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+     <div class="card" data-name="Тыква" data-price = "52">
+        <img src="https://i.pinimg.com/736x/fd/d3/ac/fdd3ac61acd82f129859ce5ff56b74de.jpg">
+        <p>Тыква</p>
+        <p>52 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+     <div class="card" data-name="Мама мия пицца от Марио" data-price = "909">
+        <img src="https://i.pinimg.com/736x/0b/4e/c4/0b4ec44d35ef2e9117654782343ff813.jpg">
+        <p>Мама мия пицца от Марио</p>
+        <p>909 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+    <div class="card" data-name="КФС комбо" data-price = "502">
+        <img src="https://i.pinimg.com/736x/d5/32/b4/d532b4d804a8e2e9c25783677f1ff261.jpg">
+        <p>КФС комбо</p>
+        <p>502 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+    <div class="card" data-name="Кофе с дополнительнымы белками" data-price = "2">
+        <img src="https://i.pinimg.com/736x/52/5b/ee/525bee3115edeb0f4f3ab8c7feb7d0cc.jpg">
+        <p>Кофе с дополнительнымы белками</p>
+        <p>502 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+    <div class="card" data-name="Бобы вареные" data-price = "772">
+        <img src="https://i.pinimg.com/1200x/3f/88/c2/3f88c25a3035e81278c9e4682b91aa6f.jpg">
+        <p>Бобы вареные</p>
+        <p>772 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+        </div>
+     <div class="card" data-name="Клубника-С-Бабай" data-price = "7776">
+        <img src="https://i.pinimg.com/736x/90/21/b6/9021b6df5e39a942301236cc33eab945.jpg">
+        <p>Клубника-С-Бабай</p>
+        <p>7776 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+         </div>
+    <div class="card" data-name="Фруктовый салат" data-price = "76">
+        <img src="https://i.pinimg.com/736x/6c/b4/0a/6cb40a8ed60ce4750db328e708cda08f.jpg">
+        <p>Фруктовый салат</p>
+        <p>76 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Смузи" data-price = "56">
+        <img src="https://i.pinimg.com/736x/c7/31/32/c731327ac0fefe02655e81dfffeee3eb.jpg">
+        <p>Смузи</p>
+        <p>56 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Куринная ножка" data-price = "34">
+        <img src="https://i.pinimg.com/736x/08/4a/80/084a80a3473111edf6f785b9836c703d.jpg">
+        <p>Куринная ножка</p>
+        <p>34 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Дядя Корней суп" data-price = "345">
+        <img src="https://i.pinimg.com/736x/7f/4a/bd/7f4abd13e49209c4dd23eecc75d1f3b1.jpg">
+        <p>Дядя Корней суп</p>
+        <p>345 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Андрей" data-price = "3455">
+        <img src="https://i.pinimg.com/1200x/c0/99/63/c09963817113e004ebaf51762c90dd84.jpg">
+        <p>Андрей</p>
+        <p>3455 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Котлета" data-price = "3">
+        <img src="https://i.pinimg.com/736x/7b/57/f5/7b57f5ad8c28120abd736fa4c80620ab.jpg">
+        <p>Котлета</p>
+        <p>3 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Краб" data-price = "333">
+        <img src="https://i.pinimg.com/736x/79/95/88/7995881ee0a3ad25585ad1d9c5e1e1b1.jpg">
+        <p>Краб</p>
+        <p>333 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Торт" data-price = "333">
+        <img src="https://i.pinimg.com/1200x/cf/a4/5f/cfa45f79e9f3f562141e4b278c613bd1.jpg">
+        <p>Торт</p>
+        <p>3334 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Чизбургер" data-price = "331">
+        <img src="https://i.pinimg.com/736x/b5/5d/85/b55d85c19be501f8b699e72abf498d93.jpg">
+        <p>Чизбургер</p>
+        <p>331 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Банан" data-price = "3311">
+        <img src="https://i.pinimg.com/1200x/03/d8/0e/03d80e37434bb260d6f649446ec3a361.jpg">
+        <p>Банан</p>
+        <p>3311 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Бешеные спагетти от Луиджи" data-price = "03052026">
+        <img src="https://i.pinimg.com/736x/56/fe/bc/56febcafa6f985d56c790152a5dd3ad5.jpg">
+        <p>Бешеные спагетти от Луиджи</p>
+        <p>03052026 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+     <div class="card" data-name="Огурцы" data-price = "0">
+        <img src="https://i.pinimg.com/736x/45/a9/f6/45a9f6ecff7af63cbd992e7428bd53cf.jpg">
+        <p>Огурцы</p>
+        <p>0 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+    <div class="card" data-name="Капибара" data-price = "10">
+        <img src="https://i.pinimg.com/736x/5c/75/a0/5c75a08041d4c2a35306a83a1ab71ff4.jpg">
+        <p>Капибара</p>
+        <p>10 Р</p>
+        <button class="add_btn" onclick="Vasa_addToCart(this)">Добавить в корзину</button>
+    </div>
+
+
+     </div>
+
+
+
+
+
+
+
+
+</div>
+<p style="color: white;text-align: center;">(Конец меню Дебил)</p>
+<script>
+    const cart=[];
+let total=0;
+const cartDiv = document.getElementById("cart");
+const cartUl  = document.getElementById("cart_list");
+const cartBtn = document.getElementById("cart_btn");
+
+function Igor_clearCart(){
+    cart.length = 0;
+    total = 0;
+    renderCart();
+}
+function openOrHide(){
+    cartDiv.style.display = cartDiv.style.display === "block"? "none":"block";
+}
+function Vasa_addToCart(btn){
+    const card  = btn.closest(".card");
+    const name  = card.getAttribute("data-name");
+    const price = parseFloat(card.getAttribute("data-price"));
+    cart.push({name,price});
+     total+=price;
+    renderCart();
+}
+function renderCart(){
+    cartUl.innerHTML = "";
+    cart.forEach((item,index)=>{
+
+    const li = document.createElement("li");
+    li.textContent = `${item.name} - ${item.price}`;
+    cartUl.appendChild(li);
+    });
+    const total_li = document.createElement("li");
+    total_li.textContent = `Итоговая стоимость:${total}`;
+    cartUl.appendChild(total_li)
+}
+function send(){
+const tg = window.Telegram.WebApp;
+tg.expand();
+let text = cart.map(item => `${item.name} ${item.price}`).join("\n");
+text += `Итоговая стоимость:${total}`;
+tg.sendData(text)
+
+}
+</script>
+</body>
+</html>
