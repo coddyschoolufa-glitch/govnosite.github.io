@@ -218,7 +218,6 @@ function Vasa_addToCart(btn){
 function renderCart(){
     cartUl.innerHTML = "";
     cart.forEach((item,index)=>{
-
     const li = document.createElement("li");
     li.textContent = `${item.name} - ${item.price}`;
     cartUl.appendChild(li);
@@ -231,7 +230,7 @@ function send(){
 const tg = window.Telegram.WebApp;
 tg.expand();
 let text = cart.map(item => `${item.name} ${item.price}`).join("\n");
-text += `Итоговая стоимость:${total}`;
+text += `\nИтоговая стоимость:${total}`;
 tg.sendData(text)
 
 }
