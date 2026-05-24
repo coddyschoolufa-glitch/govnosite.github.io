@@ -218,6 +218,7 @@ function Vasa_addToCart(btn){
 function renderCart(){
     cartUl.innerHTML = "";
     cart.forEach((item,index)=>{
+        
     const li = document.createElement("li");
     li.textContent = `${item.name} - ${item.price}`;
     cartUl.appendChild(li);
