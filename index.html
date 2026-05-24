@@ -212,7 +212,7 @@ function Vasa_addToCart(btn){
     const name  = card.getAttribute("data-name");
     const price = parseFloat(card.getAttribute("data-price"));
     cart.push({name,price});
-     total+=price;
+    total = price * quantity;
     renderCart();
 }
 function renderCart(){
